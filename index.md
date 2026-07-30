@@ -29,7 +29,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 # First Milestone
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PoXtgeYFXZ4?si=KZ8p7ZyIlwunwfTO" title="Milestone 1 Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="1160" height="610" src="https://www.youtube.com/embed/PoXtgeYFXZ4?si=KZ8p7ZyIlwunwfTO" title="Milestone 1 Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 My first milestone consists of the entire word clock portion of the project, which took me well over half of the progrma to build. Using hand-sawed acrylic for the backing and sides, as well as a clouded acrylic sheet for the front panel, the majority of the structure and frame are assembled with hot glue and superglue. Inside of the square frame, 201 individual LEDs are daisy chained in series, each with a power and ground wire as well as a data wire that runs from one to the other. The LEDs are cut from a typical individually addressable LED strip, and I soldered each one according to the spacing of letters that I designed on my grid. There is a cardstock grid that isolates each LED from the other, allowing for them to light up individually without the light bleeding over.
 
