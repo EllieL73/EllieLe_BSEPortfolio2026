@@ -1,1 +1,3 @@
-This repository is a template for documenting BlueStamp Engineering projects. Users should replace this text with a description of what their project is and what their repository holds. 
+This repository contains the code for my 2026 Bluestamp Summer Engineering Project, which is detailed below:
+
+A wall-mountable clock that displays words which correspond with the current time. These words are shown through a laser-cut sheet and LED lighting behind it, with select words being illuminated at a time. It is electronically to a globe, on which one may move a token around the surface to set a time zone for the clock. The token attaches magnetically, with a magnetic follower inside of the globe. Electronics are situated inside of the globe and calculate the position of the token, conveying that data to set the clock’s time zone.
