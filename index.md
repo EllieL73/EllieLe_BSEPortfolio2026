@@ -21,11 +21,9 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="870" height="457.5" src="https://www.youtube.com/embed/N8rfFMciLm0?si=YuZB1L0fa5mSrYMO" title="Milestone 2 Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+This was a relatively quick milestone to complete, given that it consisted mostly of transferring all the electrical components on my breakboard over to a perfboard. This required some soldering and reinforcing some of the wires so that they wouldn't snap. It also meant that the electronics would be permanently binded with the clock at this point, since the power injection wires would be soldered to the perfboard. While testing, I realized that the load on the linear voltage regulator was too large and temporarily changed to a switching voltage regulator, which I had to tune, but that ended up failing as well and instead I swtiched back to the linear voltage regulator and just dimmed the LEDs to prevent it from drawing too much current. This was around the same time when I added a heat sink for the linear voltage regulator to keep it from overheating.
+
+During the process of transferring electronics over to the perfboard, I also programmed in a start sequence with rows of white LEDs sweeping toward the middle, then red LEDs circling the outside of the clock. This required additional matrices to be made to store the correct IDs and ranges for the sequences.
 
 # First Milestone
 
