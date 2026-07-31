@@ -46,6 +46,8 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 
 The entirety of the project's code, which is commented to show the purpose and functionality of individual lines/sections:
 
+## Main C++ Code
+
 ```c++
 //necessary libararies
 #include<FastLED.h>
@@ -399,15 +401,55 @@ void loop() {
 }
 ```
 
+## Configurations in platformio.ini
+
+This project was programmed on VS Code with the Platform IO extension, which configures an environment on the IDE for programming microcontrollers such as the Arduino Nano ESP32. The following are specifications required for Platform IO, including libraries used:
+
+```ini
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[env:arduino_nano_esp32]
+platform = espressif32
+board = arduino_nano_esp32
+framework = arduino
+
+lib_deps = 
+    fastled/FastLED@^3.10.3
+    paulstoffregen/Time@^1.6.1
+```
+
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
+The essential costs for the project and cost of each item, as well as their function in the overall project:
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Arduino Nano ESP32 | the project's microcontroller or the "brain" of the project which stores and processes code; the central operator that controls other components | $18.30
+| <a href="https://store-usa.arduino.cc/products/nano-esp32?srsltid=AfmBOoqTU1gbJDuiphj2Ymhx0KF3ZIAIQRkZAZkR9OxiSuW1m9UaDbtA"> Link </a> |
+| WS2812B LED Strip  | LEDs to light up words corresponding to the time; can be cut and soldered as I did for individual LEDs for each letter or just soldered in rows | $8.99 (2x) | <a href="https://www.amazon.com/dp/B0BNN1JZS8?lv=shuf&s=hi&crid=1MIIJ7W08LDIH&keywords=Individually%2BAddressable%2BLED%2BStrips&sprefix=individually%2Baddress%2Ctools%2C1257&th=1&dib_tag=se&dib=eyJ2IjoiMSJ9.Tp2GRBfcB5XRN3_DGOSt1ZGfn5k9iGgHFvvbHYD-GgMURYFRwUykXxwbqmRMhgalucGUZm7h3lgfdazdAW3-NpAZqw-P1D9ATs66BOnBdlnYFTtra7sbA4fEuuO8vIpu1k1ToETi1NfMPYSow_NJU5j2rnrWYHboLaY8OZ7RUP0dna7RP9fAp8m_0RbiYHi9d6lDQkNH8evD-3r0_W0c6r8Cu-90ambDua5m1sk58idhdg6vESW81b1A0FuhqFN3siInXR1BqqutyePDX-o6rngmTkMQSa49ZFLG3MAilzw.RGP3Xz1e7bbUWb3l9zeoxxbqYC8rrlK7zzyWVsW5Xv0&qid=1782841976&sr=1-4&channelId=500&ref_=sr_1_4&plpRedirect=mhFallback"> Link </a> |
+| Frosted Acrylic Sheet (12”x12”) | prevents harsh light from coming through the word cutouts; allows for a more consistent lighting of each word | $15.00 | <a href="https://www.amazon.com/dp/B07R9YRNZM?lv=shuf&keywords=frosted+clear+acrylic+sheet&dib_tag=se&dib=eyJ2IjoiMSJ9.ZXWzAMLgzG14HoXIRglW82kV4MpLMkj9CnuQ5ww8LcRqSaqE1yxzHaNUGgsojT1NH10UseoCBpvj1lP1um7u6O2sv2gObw-uJNCSiUyVScRjfVTDczL-L7R5BKYJXCtKKG-eeInJQvVgJ7IQLlBTVzSOzmGVGsUdAPSc37TGCP_XqvoTwANJmsMqxis-TaYYe_KMqfLPruXqdjnsp40mgTmK-aYaGoCeCpmlGxvQZWo.4ANrX46Xz-eQ_KilWISUtOqpXoioPctk_WkogflSTPs&qid=1782672692&sr=8-20&channelId=500&ref_=sr_1_20&plpRedirect=mhFallback"> Link </a> |
+| Clear Acrylic Sheet (12"x12") Pack of 2 | composes the backing for the clock (surface for the LEDs) and the sides to make it stable/boxy | $18.30
+| <a href="https://www.amazon.com/Clear-Acrylic-Sheet-Plexiglass-2-Pack/dp/B081R3VCLL/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.TrlIoOO_kkx2582e7270mRkNdeMMHa8pUPem-V-MX_veX401GG0fRin737QNuYv-jKEeyOMX5hN5nEDK3lKpXieoTOX6xN8Vmi4PWjNFfySOKwRTvwBW--Uvl_QWtSdybc5r-eUmpqrfMx2czdkz86ov_7c8NyrziS31C6O_r4XobS_j3OlRO5XZscw3hl6nz3d3AygVNYndtP05JQYHL9u6ddpCwXKY-jlJV6PNPOs.JQlgB40Nwf7LJtBr5d4CdZjp5yYld3pb9UHzitF8AOk&dib_tag=se&hvadid=695066734069&hvdev=c&hvexpln=67&hvlocphy=9032183&hvnetw=g&hvocijid=16295209345137170117--&hvqmt=e&hvrand=16295209345137170117&hvtargid=kwd-295763709733&hydadcr=24656_13611721&keywords=12x12%2Bacrylic%2Bsheet&mcid=c34901558a0e3fb5a51f48364bc353cd&qid=1785515643&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"> Link </a> |
+| Assorted Cardstock (multiple colors; 12"x12") | what I used to make the isolating grid to stop light from bleeding into other letters; I also used a laser cutter at home to make the front panel with the letter grid that I designed | $18.30
+| <a href="https://www.amazon.com/Neenah-Collection-Specialty-Assortment-46408-02/dp/B003A2I4TO/ref=sr_1_7?channelId=4&clpRedir=Y&dib=eyJ2IjoiMSJ9.7R90mO8YkLbG001URG4Nk8yONgDd4kJzji550MQdw6GG0ErNUyoLmqZpcgnKsD0wpw8GnnifPsWLTaxkJVcL150VnJovDBJhguyujxQ_U3Z0Pgd4Qm7G0FDBvx3pBntRf32-QwAsUjFRuQg3bCxhzFxYlyrRfFbCxqVwAlLN4wgSvUaZWIzqDTUOEa0RvQNasq1GLzTG39g6mglCe4ueBSp07Eu6jH3kY0RxMuC1I14Lyi52qbh_3qRgic3E9WvA1J5bIC7KgRMIse9TmtqcptWHZMJ0RmFg2bLC-B0UO4Q.w8CRTM03-uMncwA69D9g1E65j6e2TVc5RrurODSGzwg&dib_tag=se&hvadid=693936209231&hvdev=c&hvexpln=67&hvlocphy=9032183&hvnetw=g&hvocijid=13896404654331395278--&hvqmt=e&hvrand=13896404654331395278&hvtargid=kwd-298652188787&hydadcr=4863_13229487&keywords=12x12%2Bcardstock&mcid=8993af7c102837c48df34d6c7ce94265&plpRedirect=mhFallback&qid=1785515854&sr=8-7&th=1"> Link </a> |
+| Assorted Capacitors and Resistors | used 2 capacitors to manage voltage drop and 1 resistor to keep the data wire for the LEDs safely operating | $25.99 (but smaller kits available)
+| <a href="https://www.amazon.com/MOGAOPI-Electronic-Electrolytic-Capacitors-Transistor/dp/B09237GYCD/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.Wpac7S1V8txZVlLd6kpC7rWmIeKkONuelRYp53Lh5qgilaqV0Gh2gpH-Zlww6QPw1pgR461A-gZySPxPsJAn2UZrTW6xH8w9A8HTNHhGiCp0aRB0_jd3cVXYSex8nfaZxe4ZstdixTp-3nNHy2FIHquZO1oMxhO5sUQFA2LkLMxMs_dgdWf5IoMfA0miYx9zVPsZAbH2mZot2pZwYdcAR2vUsOhF0sEaLPg4AQrIhX6oIosawEoF9vJRAzUL1xnEPN0PitvoPv6mle9eZNwaNQ_ya5l5EV0GCYSMN011lNE.nD-3OWnnqSOGJyQ98nucrWuU6MwmXWwQIrbzGo34oSA&dib_tag=se&hvadid=792754737803&hvdev=c&hvexpln=67&hvlocphy=9032183&hvnetw=g&hvocijid=7073605126640458081--&hvqmt=e&hvrand=7073605126640458081&hvtargid=kwd-331922686271&hydadcr=543_1015366242&keywords=resistor+and+capacitor+kit&mcid=eafdfa97d07b3ce4becc9b8baca614b7&qid=1785516543&s=industrial&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"> Link </a> |
+| Perfboards | a basis for the smaller components involved in the project, such as the microcontroller, capacitors, and resistors | $9.99
+| <a href="https://www.amazon.com/ELEGOO-Prototype-Soldering-Compatible-Arduino/dp/B072Z7Y19F/ref=sr_1_1_sspa?crid=M81G3XGD2M6Z&dib=eyJ2IjoiMSJ9.FPDVUs4HOgNXdui7sk7F5_Lb6eBhfnp0Lfap_6Wi-bsD1glkmTTecqq9g7BYok0PWlGb6XIKVPdCX_7FyXqQElwKc11lev2Tx9UOu_b1yovkB-ZjCfs4L0Cwn-_mSBvIobyITrgM6TVfTgE2_B2j0mDlmxJHJ8h264Kbe-vou9uFJffRgLdHn8LodEjEEWySwL1xkUd40DQkyLTPN01v700-6W3N38WFvh06NVq-nMI.LiMxyCcAxx-dolTm8CqMAt6aotHp8bdigClHL7KuW8I&dib_tag=se&keywords=individual+perfboard&qid=1785516776&sprefix=individualperfboard%2Caps%2C215&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"> Link </a> |
+| Assorted Wire Spools | connects all electrical components and carries power or data | $15.99
+| <a href="https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4Mzk2Mzk3NDQ1MTMzNjc3OjE3ODU1MTcwMDY6c3BfYXRmOjMwMDE5MDAxNjUxMTUwMjo6MDo6&url=%2FTUOFENG-Solid-Colors-Tinned-Copper%2Fdp%2FB07TX6BX47%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.QwMX3CTcLF7NPouCJnhBWWTVqMXBkRL5yKXS-uGMkMEXgVqo0GHkVgBrzL0tJ5NnArguOjZ4bI2dJEZcOrZDotfHpgw-2NWXrDBUsOvM-bFy3GjSlbtQWDGBwhDjveLd4ec9Ddl8R-_bMoLFKfHSorBeomFTDSZEY8neBhdez8DS_OaRKojovpvZ3zhiEsxT0hRTM46W3hROEFyFI_ybJ4NgggcS57DVBykFDQuk_hXfRjK6U9MYxDotepnVVYITzsqGPhokrnZnXqUeyn89Gp9LstCn3Bz854xrgR8cFQs.l8sfy6G2kM7FbD-MmLGLcmpRm1q1RhDX5GhMou1z7lQ%26dib_tag%3Dse%26hvadid%3D777805363327%26hvdev%3Dc%26hvexpln%3D67%26hvlocphy%3D9032183%26hvnetw%3Dg%26hvocijid%3D16185805269056756440--%26hvqmt%3De%26hvrand%3D16185805269056756440%26hvtargid%3Dkwd-21758096%26hydadcr%3D8426_13831415%26keywords%3Dwire%2Bspool%26mcid%3Da7224b9707bb34fba3d04cdf22f990d5%26qid%3D1785517006%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1"> Link </a> |
+| 9V DC Adapter | provides power that can be handled by the linear voltage regulator from a typical power outlet | $9.35
+| <a href="https://www.amazon.com/sspa/click?ie=UTF8&spc=MTozMTE3MzA0OTYxNDA0MDI4OjE3ODU1MTcxODQ6c3BfYXRmOjMwMDIwMjg4OTE0MzkwMjo6MDo6&url=%2FAdapter-Guitar-Supply-PSA-120S-ME-50B%2Fdp%2FB087JJ1JHX%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9.6_WALrpeCtl4wUAC3g0gvDgY1sGYWe3G5R8p-Yd567_eFNMenZSpDkOeyCpHtMGUjfDImdHAaa2CRwB6uOwn4GnGWVMl-zRWf8EW8FX5F271dSs4ShHYJSTOMVdRouUN5spi7KK_mMrlTx85Pm4s9VXnP7MMxXrZcRmT3FnSAMzZDQbIWgGisrRz-0kIK9dt3IaCAdetbMx1iwJMejoz-yly7zrgC3Q5tBkXX6HDfxU.xCQuE9mj7-0lSuWFqq0TDXw9raN0W5oMOJmvXyz3lmo%26dib_tag%3Dse%26hvadid%3D693349412817%26hvdev%3Dc%26hvexpln%3D67%26hvlocphy%3D9032183%26hvnetw%3Dg%26hvocijid%3D8489475260472379682--%26hvqmt%3Db%26hvrand%3D8489475260472379682%26hvtargid%3Dkwd-65527940%26hydadcr%3D19103_13454503%26keywords%3D9v%2Bdc%2Badapter%26mcid%3De7c67687e2863697a591e5fcced55e0c%26qid%3D1785517184%26sr%3D8-1-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1"> Link </a> |
+| Linear Voltage Regulator (9V to 5V) | steps down the voltage from the DC converter to 5V, which can both power the LED grid and the Arduino Nano ESP32 | $0.42
+| <a href="https://www.digikey.com/en/products/detail/umw/L7809CV/24889965?gclsrc=aw.ds&gad_source=4&gad_campaignid=21136823955&gbraid=0AAAAADrbLlgax7XkhkBZAYZXBTjxmM_Ox&gclid=CjwKCAjwj7HTBhBiEiwA8s35OmWbbnDTIcJ-OTrKWcdzf3ZUveNLpL-t31LZuEuk38GTTEdtdjzcWhoCITkQAvD_BwE"> Link </a> |
+| DC Barrel Jack Adapter | allows for wiring the DC adapter to the perfboard | $1.90 | <a href="https://www.dfrobot.com/product-508.html?gad_source=1&gad_campaignid=23441887437&gbraid=0AAAAADucPlAcY6rVjhUWVJH9oTBNrIIQq&gclid=CjwKCAjwj7HTBhBiEiwA8s35OliOnHRyuTPeaf5M04IkpQPCyezKpIN4ZCPyI52AzZwlPUcb7T2r2hoCDJQQAvD_BwE"> LInk </a> |
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
@@ -415,4 +457,4 @@ One of the best parts about Github is that you can view how other people set up 
 - [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
 - [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
 
-To watch the BSE tutorial on how to create a portfolio, click here.
+To Angeline, Kin, Ishaan, and Justin --> thank you!
