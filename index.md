@@ -124,9 +124,10 @@ D4 --> Cusco, Peru, 1 bottom
 D5 --> Tokyo, Japan
 */
 //first value of element is pin that is being read, second is gmtOffset
-std::unordered_map<uint8_t, int> timezones = 
-  \{\{A3, -8*3600}, {A4, 3600*7}, {A5, -3600*5}, {A6, 3600*3}, {A7, 3600*11}, 
-  {D2, 3600}, {D3, 3600*3}, {D4, -3600*5}, {D5, -3600*9\}\};
+std::unordered_map<uint8_t, int> timezones = {
+  {A3, -8*3600}, {A4, 3600*7}, {A5, -3600*5}, {A6, 3600*3}, {A7, 3600*11},
+  {D2, 3600}, {D3, 3600*3}, {D4, -3600*5}, {D5, -3600*9}
+};
 
 //configurations for the hours start IDs and ranges
 int hourConfigs[13][2] = {
