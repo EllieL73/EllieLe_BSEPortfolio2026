@@ -11,11 +11,9 @@ A wall-mountable clock that displays words which correspond with the current tim
 
 <iframe width="870" height="457.5" src="https://www.youtube.com/embed/-jb-2cFIigA?si=iRqVPUFcU7uKYvGv" title="Final Milestone Youtube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+The final milestone consisted of constructing the entire globe portion of the project, which involved extremely delicate reed switches. To preserve these switches and their glass cases, I soldered them together and created a framework of wires before hotgluing both carefully bent leads to the inside of the globe surface (which we hand-sawed open). One side of each reedswitch was wired to a core wire, which was wired to the A2 pin on the Arduino Nano ESP32. This pin sent a constant LOW signal, which was picked up by other pins on the microcontroller when the switch was closed. The code iterates through each of these pins and checks which are closed to update the gmtOffset variable, thereby changing the time zone in the next iteration through the loop() function. 
+
+An issue that I had to address was getting the wires to come out from the globe neatly. I wanted to allow movement/rotation of the globe initially, but time was not permitting. Instead, there was a convenient hole in the axis that mounted thw globe on its respective stand, and wires could come out from there. I routed each wire and soldered it to the appropriate pin on the nano, and the prewritten code ran smoothly. To keep it organized, I wrapped soldering wtih electrical tape (although heat shrink would be more ideal for the future) and bundled the wires with zipties to complete the project.
 
 # Second Milestone
 
