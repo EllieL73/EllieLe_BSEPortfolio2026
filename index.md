@@ -455,9 +455,10 @@ The essential costs for the project and cost of each item, as well as their func
 | Ceramic Disc Magnets (20 pcs) | used for the airplane token and also for inside the globe to keep the token suspended | $4.99 | <a href="https://www.amazon.com/Magnets-Adhesive-Backing-Refrigerator-Projects/dp/B0BKQ4J2DB/ref=sr_1_11?dib=eyJ2IjoiMSJ9.7Lvwznq0O0Ud0JGycxrlGdO1YvG28zJ5uZkupRt-pDU1rV8lpsvQ51SeeAEQxNEREPVCLjjlrS5CFWbPv7cJx6DWA7cnF_JmPt_oNTyeHvmz0gs8IXuTgV5BxDyZlexZCLgFbwumYvMIqsaPvylBy0Kz9iz2ox5nt5HPTrS5XvVzKBx7jkbkUk-YtoBOy4P9x4S9SeKM0-BIpLj4-WJHKeyV5r-LUmDdfEew7N8f8F4.1ExiDg8AXCZQ5GTTdV43SvYW5djObgsLDBAG1X4Vli4&dib_tag=se&hvadid=792737725364&hvdev=c&hvexpln=67&hvlocphy=9032183&hvnetw=g&hvocijid=16384528335500780283--&hvqmt=e&hvrand=16384528335500780283&hvtargid=kwd-296253639522&hydadcr=7518_13871070&keywords=ceramic%2Bdisc%2Bmagnets&mcid=32981390dc83362f953f3b898250f88a&qid=1785519234&sr=8-11&th=1"> </a> |
 
 # Other Resources/Examples 
- - 
- - 
- - 
+Similar projects, tutorials, and resoruces that I used to help me build and troubleshoot this project:
+ - [Word Clock On Make: Magazine](https://makezine.com/projects/small-word-clock/)
+ - [Arduino Time Library](https://docs.arduino.cc/libraries/time/)
+ - [FastLED Library on Github](https://github.com/fastled/fastled)
 
 # Other Bluestamp Portfolios
 Example portfolios that can be used for reference and insight into the program:
